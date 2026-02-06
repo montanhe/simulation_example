@@ -228,6 +228,4 @@ with st.expander('About this Application'):
 
     **Actions:**
     - **Run Simulation**: Runs the simulation with your selected parameters
-    - **Optimize Parameters**: Finds the optimal k1, k2, k3 values to maximize
-                               production
     ''')
