@@ -4,6 +4,8 @@ import random
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import streamlit as st
+from scipy.optimize import minimize
+
 
 ###############################################################################
 # Setup streamlit
@@ -122,7 +124,7 @@ def monitor(env, wip1, wip2, completed_units, records):
         t = math.floor(env.now)
         records.append((t, len(wip1.items), len(wip2.items), completed_units[0]))
         yield env.timeout(1.0)
-
+    
 def run_simulation_monitor(k1, k2, k3, sim_time):
     '''
        Run the simulation with rates k1, k2 and k3 and setup a monitor to 
